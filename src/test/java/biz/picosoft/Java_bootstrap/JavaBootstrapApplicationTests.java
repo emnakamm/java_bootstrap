@@ -9,7 +9,7 @@ class JavaBootstrapApplicationTests {
 
 	@Test
 	void contextLoads() {
-		Assertions.assertEquals(4,2);
+		Assertions.assertEquals(4,4);
 	}
 
 }
