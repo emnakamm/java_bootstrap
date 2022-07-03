@@ -10,12 +10,13 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Test App'
+            
+                bat ' mvn test'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploy App'
+                bat ' mvn deploy'
             }
         }
 
