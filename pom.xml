@@ -7,6 +7,7 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
+
 	</parent>
 	<groupId>biz.picosoft</groupId>
 	<artifactId>Java_bootstrap</artifactId>
@@ -15,6 +16,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<sonar.buildString> [...] </sonar.buildString>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -27,7 +29,36 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    
+ 
+  		<dependency>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>3.5.0.1254</version>
+		 </dependency>
 	</dependencies>
+	
+
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>
+                  http://localhost:9000
+                </sonar.host.url>
+            </properties>
+        </profile>
+     </profiles>
 
 	<build>
 		<plugins>
@@ -35,7 +66,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
+		 <plugin>
+     	   <groupId>org.sonarsource.scanner.maven</groupId>
+       	    <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.7.0.1746</version>
+			
+		</plugin>
+	</plugins>
 	</build>
+
+
+    
 
 </project>
