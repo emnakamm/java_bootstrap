@@ -8,8 +8,7 @@ pipeline {
             	
                 
             }
-         stage('sonarqube analysis') 
-            {mvn clean sonar:sonar}
+
         }
         stage('Test') {
             steps {
