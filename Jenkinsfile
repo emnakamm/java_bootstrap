@@ -19,8 +19,7 @@ pipeline {
          stage('sonar') {
             steps {
             
-                bat '  mvn clean verify sonar:sonar
-'
+                bat '  mvn clean verify sonar:sonar'
             }
         }
 
