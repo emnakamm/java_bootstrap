@@ -37,33 +37,11 @@
     </dependency>
     
  
-  		<dependency>
-			<groupId>org.codehaus.mojo</groupId>
-			<artifactId>sonar-maven-plugin</artifactId>
-			<version>3.5.0.1254</version>
-		 </dependency>
-		 <dependency>
-		     <groupId>org.sonarsource.scanner.maven</groupId>
-       	    <artifactId>sonar-maven-plugin</artifactId>
-            <version>3.7.0.1746</version>
-            </dependency>
+ 
 	</dependencies>
 	
 
-    <profiles>
-        <profile>
-            <id>sonar</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <!-- Optional URL to server. Default value is http://localhost:9000 -->
-                <sonar.host.url>
-                  http://localhost:9000
-                </sonar.host.url>
-            </properties>
-        </profile>
-     </profiles>
+
 
 	<build>
 		<plugins>
@@ -71,12 +49,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		 <plugin>
-     	   <groupId>org.sonarsource.scanner.maven</groupId>
-       	    <artifactId>sonar-maven-plugin</artifactId>
-            <version>3.7.0.1746</version>
-			
-		</plugin>
+
 	</plugins>
 	</build>
 
