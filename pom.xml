@@ -17,6 +17,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<sonar.buildString> [...] </sonar.buildString>
+		<sonar.exlcusions>src/test/java/biz/picosoft/*</sonar.exlcusions>
 	</properties>
 	<dependencies>
 		<dependency>
