@@ -15,6 +15,11 @@ pipeline {
                 bat ' mvn test'
             }
         }
+        stage('sonar') {
+            steps {
+            
+                bat ' mvn clean verify sonar:sonar' }
+        }
 
 
     }
