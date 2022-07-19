@@ -8,6 +8,8 @@ pipeline {
             	
                 
             }
+         stage ('Build docker image'){
+            bat' docker build
        }
  }
             
