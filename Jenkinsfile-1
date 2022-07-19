@@ -10,7 +10,7 @@ pipeline {
             }
          stage ('Build docker image'){
             steps {
-                bat' docker build -t emnakamm/my-app'}
+                bat' docker build -t emnakamm/ .'}
                 }
          
        }
