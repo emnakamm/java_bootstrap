@@ -1,4 +1,4 @@
 FROM openjdk:11
 EXPOSE 8080
-ADD target/JUNIT-JAVA.jar JUNIT-JAVA.jar
-ENTRYPOINT ["java","-jar","/JUNIT-JAVA.jar"]
+ADD target/java_bootstrap.jar java_bootstrap.jar
+ENTRYPOINT ["java","-jar","/java_bootstrap.jar"]
