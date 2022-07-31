@@ -22,6 +22,20 @@ pipeline {
                 bat '  mvn clean verify sonar:sonar'
             }
         }
+        stage('Build docker image') {
+            steps {
+            	bat 'docker build --tag backdocker  . '
+            	
+                
+            }
+        }
+        stage('run docker image') {
+            steps {
+            	bat 'docker run -it backdocker '
+            	
+                
+            }
+        }
 
 
     }
