@@ -1,7 +1,5 @@
 FROM  maven:3.8-openjdk-11
-WORKDIR /eclipse-workspace/Java_bootstrap
-COPY JavaBootstrapApplication.java /eclipse-workspace/Java_bootstrap/
+ARG JAR_FILE=target/Java_bootstrap-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} app.jar
 EXPOSE 8080
-ADD target/*.jar app.jar
-
-ENTRYPOINT ["java", "-jar", "/app.jar"] 
+ENTRYPOINT ["java", "-jar","/app.jar"] 
