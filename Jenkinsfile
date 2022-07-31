@@ -31,7 +31,7 @@ pipeline {
         }
         stage('run docker image') {
             steps {
-            	bat 'docker run -it backdocker '
+            	bat 'docker run  backdocker '
             	
                 
             }
